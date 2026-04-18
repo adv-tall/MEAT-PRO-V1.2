@@ -208,7 +208,7 @@ export default function MachineBreakdown() {
     return (
         <>
             <style dangerouslySetInnerHTML={{__html: globalStyles}} />
-            <div className="flex flex-col min-h-screen w-full text-[#2E395F] overflow-x-hidden relative font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
+            <div className="flex flex-col h-full w-full text-[#2E395F] overflow-x-hidden relative font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
                 
                 <GuideTrigger onClick={() => setShowGuide(true)} />
                 <UserGuidePanel isOpen={showGuide} onClose={() => setShowGuide(false)} title="REGISTRY GUIDE" iconName="wrench">
@@ -225,7 +225,7 @@ export default function MachineBreakdown() {
                 </UserGuidePanel>
 
                 {/* Header Bar */}
-                <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-6">
+                <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-0">
                     <div className="flex items-center gap-4 shrink-0">
                         <div className="w-12 h-12 bg-white flex items-center justify-center shadow-sm border border-white/60 rounded-xl text-[#2E395F]">
                             <Icons.Wrench size={24} strokeWidth={2} />
@@ -252,7 +252,7 @@ export default function MachineBreakdown() {
                     </div>
                 </header>
 
-                <main className="flex-1 w-full flex flex-col gap-6 relative z-10 custom-scrollbar animate-fadeIn min-h-0">
+                <main className="flex-1 w-full flex flex-col gap-6 relative z-10 custom-scrollbar animate-fadeIn min-h-0 mt-4">
                     
                     {/* KPI Row (Only show in breakdown list to save space) */}
                     {activeTab === 'breakdown_list' && (

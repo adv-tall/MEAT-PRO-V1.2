@@ -104,7 +104,7 @@ export default function UserPermission() {
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: globalStyles}} />
-      <div className="flex flex-col min-h-screen w-full text-[#2E395F] overflow-x-hidden relative font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
+      <div className="flex flex-col h-full w-full text-[#2E395F] overflow-x-hidden relative font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
         
         <GuideTrigger onClick={() => setIsGuideOpen(true)} />
         <UserGuidePanel isOpen={isGuideOpen} onClose={() => setIsGuideOpen(false)} title="PERMISSION GUIDE" iconName="shield-check">
@@ -123,7 +123,7 @@ export default function UserPermission() {
         </UserGuidePanel>
 
         {/* Header Bar Synced with Theme */}
-        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-6">
+        <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-0">
           <div className="flex items-center gap-4 shrink-0">
             <div className="w-12 h-12 bg-white flex items-center justify-center shadow-sm border border-white/60 rounded-xl text-[#2E395F]">
               <Icons.Shield size={24} strokeWidth={2} />
@@ -147,7 +147,7 @@ export default function UserPermission() {
           </div>
         </header>
 
-        <main className="flex-1 w-full px-8 pb-10 flex flex-col gap-6 min-h-0 animate-fadeIn">
+        <main className="flex-1 w-full flex flex-col gap-6 min-h-0 animate-fadeIn mt-4">
           {/* KPI Row */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 shrink-0">
             <KPICard title="Active Users" val={users.length} icon="users" color="#2E395F" desc="Total Staffs" />

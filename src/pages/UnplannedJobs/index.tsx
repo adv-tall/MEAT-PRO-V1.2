@@ -76,9 +76,9 @@ export default function UnplannedJobs() {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen w-full font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
+        <div className="flex flex-col h-full w-full font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
             {/* Header section (compact) */}
-            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 animate-fadeIn mb-6 shrink-0">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 animate-fadeIn mb-0 shrink-0">
                 <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-white flex items-center justify-center shadow-sm border border-white/60 rounded-xl text-[#2E395F]">
                         <Briefcase size={24} className="text-[#C22D2E]" />
@@ -108,7 +108,7 @@ export default function UnplannedJobs() {
             </div>
 
             {/* KPI Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 shrink-0">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 shrink-0 mt-4">
                 <KPICard title="Total Jobs" val={totalJobs.toString()} icon="briefcase" color="#2E395F" />
                 <KPICard title="Pending" val={pending.toString()} icon="alert-triangle" color="#D8A48F" />
                 <KPICard title="In Progress" val={inProgress.toString()} icon="play-circle" color="#55738D" />

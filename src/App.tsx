@@ -115,7 +115,7 @@ export default function App() {
             } />
             <Route path="/settings" element={
               <ProtectedRoute isConfidential>
-                <PlaceholderPage title="WMS Settings" />
+                <PlaceholderPage title="USER SETTING" />
               </ProtectedRoute>
             } />
             <Route path="/permissions" element={

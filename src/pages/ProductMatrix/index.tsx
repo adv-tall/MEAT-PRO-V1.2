@@ -150,7 +150,7 @@ export default function ProductMatrix() {
               @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
               .animate-fadeIn { animation: fadeIn 0.4s ease-out forwards; }
             `}} />
-            <div className="flex flex-col min-h-screen w-full text-[#2E395F] overflow-x-hidden relative font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
+            <div className="flex flex-col h-full w-full text-[#2E395F] overflow-x-hidden relative font-sans px-8 pt-8 pb-10" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
                 
                 <GuideTrigger onClick={() => setShowGuide(true)} />
                 <UserGuidePanel isOpen={showGuide} onClose={() => setShowGuide(false)} title="MATRIX GUIDE" iconName="book-open">
@@ -170,7 +170,7 @@ export default function ProductMatrix() {
                 <MatrixConfigModal isOpen={modal.isOpen} onClose={() => setModal({ isOpen: false, data: null })} sfgData={modal.data} onSave={handleSave} batters={batters} fgDatabase={masterItems} />
 
                 {/* Header Bar */}
-                <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-6">
+                <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-0">
                     <div className="flex items-center gap-4 shrink-0">
                         <div className="w-12 h-12 bg-white flex items-center justify-center shadow-sm border border-white/60 rounded-xl text-[#2E395F]">
                             <Icons.GitMerge size={24} strokeWidth={2} />
@@ -185,7 +185,7 @@ export default function ProductMatrix() {
                     </div>
                 </header>
 
-                <main className="flex-1 w-full flex flex-col relative z-10 custom-scrollbar animate-fadeIn min-h-0">
+                <main className="flex-1 w-full flex flex-col relative z-10 custom-scrollbar animate-fadeIn min-h-0 mt-4">
                     <div className="bg-white/80 backdrop-blur-md rounded-none border border-white/60 shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col flex-1 min-h-0">
                         
                         {/* TOOLBAR */}

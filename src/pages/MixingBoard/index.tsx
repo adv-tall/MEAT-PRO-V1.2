@@ -36,7 +36,7 @@ export default function MixingPlan() {
     );
 
     return (
-        <div className="flex flex-col min-h-screen w-full px-8 pt-8 pb-10 text-[#2E395F] overflow-x-hidden relative font-sans" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
+        <div className="flex flex-col h-full w-full px-8 pt-8 pb-10 text-[#2E395F] overflow-x-hidden relative font-sans" style={{ background: `linear-gradient(135deg, #F2F4F6 0%, #E6E1DB 100%)` }}>
             
             <GuideTrigger onClick={() => setShowGuide(true)} />
             <UserGuidePanel isOpen={showGuide} onClose={() => setShowGuide(false)} title="MIXING GUIDE" iconName="book-open">
@@ -60,7 +60,7 @@ export default function MixingPlan() {
             </UserGuidePanel>
 
             {/* Header Bar */}
-            <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-6 shrink-0 animate-fadeIn">
+            <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 shrink-0 animate-fadeIn mb-0">
                 <div className="flex items-center gap-4 shrink-0">
                     <div className="w-12 h-12 bg-white flex items-center justify-center shadow-sm border border-white/60 rounded-xl text-[#2E395F]">
                         <Activity size={24} strokeWidth={2} />
@@ -87,7 +87,7 @@ export default function MixingPlan() {
                 </div>
             </header>
 
-            <main className="flex-1 w-full flex flex-col relative z-10 custom-scrollbar animate-fadeIn min-h-0">
+            <main className="flex-1 w-full flex flex-col relative z-10 custom-scrollbar animate-fadeIn min-h-0 mt-4">
                 {activeTab === 'overview' && <MixOverview />}
                 {activeTab === 'base_production' && <BaseProductionView activeBatches={activeBatches} setActiveBatches={setActiveBatches} productMatrix={productMatrix} />}
                 {activeTab === 'sfg_waiting' && <SFGWaitingView />}
